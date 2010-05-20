@@ -1,0 +1,38 @@
+﻿<Window x:Class="DocRaptorExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Background="#E0DED4"
+        Title="DocRaptor C# Example" Height="350" Width="525">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="10" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="5" />
+            <RowDefinition Height="25" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Button Content="Sample Excel Content" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Click="SampleExcelContentClick" />
+        <Button Content="Sample PDF Content" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" Click="SamplePDFContentClick" />
+        <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" TextAlignment="Center" VerticalAlignment="Center">
+          <Hyperlink NavigateUri="http://docraptor.com/examples" Click="OpenLinkClick">More Examples</Hyperlink>
+        </TextBlock>
+
+        <TextBox Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" AcceptsReturn="True" AcceptsTab="True" x:Name="_DocumentContent"></TextBox>
+
+        <Button Content="Create Excel File" Grid.Row="4" Grid.Column="0" HorizontalAlignment="Right" Click="CreateExcelClick" />
+        <Button Content="Create PDF File" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Left" Click="CreatePDFClick" />
+
+        <TextBlock Grid.Row="5" Grid.Column="0" TextAlignment="Left" VerticalAlignment="Bottom">
+          <Hyperlink NavigateUri="http://www.expectedbehavior.com" Click="OpenLinkClick">www.expectedbehavior.com</Hyperlink>
+        </TextBlock>
+        
+        <TextBlock Grid.Row="5" Grid.Column="3" TextAlignment="Right" VerticalAlignment="Bottom">
+          <Hyperlink NavigateUri="http://docraptor.com" Click="OpenLinkClick">www.docraptor.com</Hyperlink>
+        </TextBlock>
+    </Grid>
+</Window>
