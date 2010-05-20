@@ -41,7 +41,7 @@ namespace DocRaptorExample
       if (sfd.ShowDialog() != true) { return; }
 
       var postData = String.Format(PostFormat, HttpUtility.UrlEncode(documentContent), HttpUtility.UrlEncode(sfd.SafeFileName),
-          HttpUtility.UrlEncode(type), HttpUtility.UrlEncode(test.ToString()));
+          HttpUtility.UrlEncode(type), HttpUtility.UrlEncode(test.ToString().ToLower()));
       var byteArray = Encoding.UTF8.GetBytes(postData);
 
       var request = (HttpWebRequest)WebRequest.Create(DocRaptorUrl);
