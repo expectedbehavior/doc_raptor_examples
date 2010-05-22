@@ -1,0 +1,12 @@
+class CreateSaveToPaperclipExamples < ActiveRecord::Migration
+  def self.up
+    create_table :save_to_paperclip_examples do |t|
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :save_to_paperclip_examples
+  end
+end

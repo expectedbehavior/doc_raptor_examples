@@ -1,0 +1,2 @@
+class SaveToPaperclipExample < ActiveRecord::Base
+end

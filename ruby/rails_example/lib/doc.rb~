@@ -1,0 +1,34 @@
+class Doc
+  include HTTParty
+  base_uri "https://docraptor.com"
+  API_KEY = "wEuBlNmJqtJdUG0byCSH"
+  
+  #base_uri "http://doc-raptor-development.local/"
+  #API_KEY = "wEuBlNmJqtJdUG0byCSH"
+
+  def self.create_pdf(params, &block)
+    params[:document_type] = "pdf"
+    create(params, &block)
+  end
+  
+  def self.create_xls(params, &block)
+    params[:document_type] = "xls"
+    create(params, &block)
+  end
+  
+  def self.create(params)
+    response = post("/docs", :body => {:doc => params}, :basic_auth => {:username => API_KEY})
+    Tempfile.open("docraptor") do |f|
+      f.extend(ActionController::UploadedFile)
+      f.content_type  = response.headers["content-type"]
+      f.original_path = params[:name]
+      
+      f.sync = true
+      f.write(response.body)
+      f.rewind
+
+      yield f
+    end
+  end
+  
+end
