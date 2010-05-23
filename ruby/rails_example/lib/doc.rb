@@ -16,20 +16,20 @@ class Doc
     options = options.dup
     options.reverse_merge!(default_options)
     
-    response = post("/docs", :body => {:doc => params}, :basic_auth => {:username => API_KEY})
+    response = post("/docs", :body => {:doc => options}, :basic_auth => {:username => API_KEY})
     
     if block_given?
       Tempfile.open("docraptor") do |f|
         #for Paperclip, to get name and content correct
         f.extend(ActionController::UploadedFile)
         f.content_type  = response.headers["content-type"]
-        f.original_path = params[:name]
+        f.original_path = options[:name]
       
         f.sync = true
         f.write(response.body)
         f.rewind
 
-        yield f
+        yield f, response
       end
     else
       response

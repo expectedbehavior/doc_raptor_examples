@@ -1,0 +1,17 @@
+%h1 Listing Examples
+
+%table
+  %tr
+    %td Document Name
+    %td Document Type
+    %td Test Mode
+  - @save_to_paperclip_examples.each do |example|
+    %tr
+      %td=example.document_name
+      %td=example.document_type
+      %td=example.test
+      %td=link_to 'Download', example.document.url
+      %td=link_to 'Destroy', example, :confirm => 'Are you sure?', :method => :delete 
+%br
+
+= link_to 'New Example', [:new, :save_to_paperclip_example]

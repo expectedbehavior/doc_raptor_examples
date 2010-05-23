@@ -1,0 +1,21 @@
+%h1 New Example
+- form_for @save_to_paperclip_example do |f|
+  = f.error_messages
+  %p
+    = f.label :document_name
+    %br
+    = f.text_field :document_name
+  %p
+    = f.label :document_type
+    %br
+    = f.select :document_type, SaveToPaperclipExample::TYPES
+  %p
+    = f.label :test, "Test Mode"
+    %br
+    = f.check_box :test
+  %p
+    = f.label :document_content
+    %br
+    = f.text_area :document_content
+  %p
+    = f.submit "Create"

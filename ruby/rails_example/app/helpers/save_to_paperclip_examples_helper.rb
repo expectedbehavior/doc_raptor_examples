@@ -1,0 +1,2 @@
+module SaveToPaperclipExamplesHelper
+end
