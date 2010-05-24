@@ -2,8 +2,13 @@ class SaveToPaperclipExamplesController < ApplicationController
 
   def index
     @save_to_paperclip_examples = SaveToPaperclipExample.all
+    
+    respond_to do |format|
+      format.html
+      format.xls { send_data Doc.create(:name => "example", :document_content => render_to_string) }
+    end
   end
-
+  
   def new
     @save_to_paperclip_example = SaveToPaperclipExample.new
   end

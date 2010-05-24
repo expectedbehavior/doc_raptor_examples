@@ -1,0 +1,13 @@
+%table{ :name => "Excel Example" }
+  %tr{ :style => "font-weight:bold;" }
+    %td Document Name
+    %td Document Type
+    %td Test Mode
+    %td Result Url
+  - @save_to_paperclip_examples.each do |example|
+    %tr
+      %td=example.document_name
+      %td=example.document_type
+      %td=example.test
+      %td{ :style => "color:blue;" }=path_to_url(example.document.url)
+    
