@@ -4,13 +4,19 @@ This is a repository of examples in various languages on how to use and integrat
 
 == What does this examples repo contain?
 
+=== Code
 1. Curl example, for the real nuts & bolts look
-2. A straight Ruby example, using httparty
-3. A more complicated Ruby on Rails example, showing how to use the service with controllers/views as well as Paperclip.
+2. A plain Ruby example, using HTTParty
+3. A more complicated Ruby on Rails example, showing how to use the service with controllers/views as well as Paperclip
 4. A simple PHP example (using the pecl_http php extension)
-5. Javascript examples for both Prototype and jQuery, for whichever strikes your fancy
+5. Javascript examples for Prototype.js and jQuery; whichever strikes your fancy
 6. An interactive .NET C# / WPF example
-7. Examples on how to do complicated excel styling and layout
+7. An HTML example with complicated excel styling and layout
+
+=== Example Outputs
+1. doc_raptor_sample.pdf - produced by the curl, plain ruby, and php examples
+2. doc_raptor_sample.xls - produced by the curl, plain ruby, and php examples
+3. excel_styling/example1.xls - produced by sending the contents of excel_styling/example1.html to DocRaptor
 
 ==
 
