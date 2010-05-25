@@ -1,0 +1,18 @@
+= Doc Raptor Examples Repository
+
+This is a repository of examples in various languages on how to use and integrate with Doc Raptor. Doc Raptor is a web service for easily and quickly generating Excel or PDF files without tendious syntax or extra server requirements.
+
+== What does this examples repo contain?
+
+1. Curl example, for the real nuts & bolts look
+2. A straight Ruby example, using httparty
+3. A more complicated Ruby on Rails example, showing how to use the service with controllers/views as well as Paperclip.
+4. A simple PHP example (using the pecl_http php extension)
+5. Javascript examples for both Prototype and jQuery, for whichever strikes your fancy
+6. An interactive .NET C# / WPF example
+7. Examples on how to do complicated excel styling and layout
+
+==
+
+* Doc Raptor - http://docraptor.com
+* Expected Behavior - http://www.expectedbehavior.com
