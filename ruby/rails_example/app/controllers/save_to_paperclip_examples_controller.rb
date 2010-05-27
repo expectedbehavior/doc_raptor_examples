@@ -3,9 +3,11 @@ class SaveToPaperclipExamplesController < ApplicationController
   def index
     @save_to_paperclip_examples = SaveToPaperclipExample.all
     
+    # Don't forget to reigster the xls/pdf mime types in config/initializers/mime_types.rb
     respond_to do |format|
       format.html
-      format.xls { send_data Doc.create(:name => "example", :document_content => render_to_string) }
+      format.xls { send_data Doc.create(:name => "example_xls", :document_content => render_to_string, :document_type => "xls") }
+      format.pdf { send_data Doc.create(:name => "example_pdf", :document_content => render_to_string, :document_type => "pdf") }
     end
   end
   

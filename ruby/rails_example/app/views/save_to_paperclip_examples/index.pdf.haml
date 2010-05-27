@@ -1,0 +1,17 @@
+!!!
+%html
+  %head
+    %title PDF Example
+  %body
+    %h1 Listing Examples
+
+    %table{ :width => "100%" }
+      %tr{ :style => "font-weight:bold;" }
+        %td Document Name
+        %td Document Type
+        %td Test Mode
+      - @save_to_paperclip_examples.each do |example|
+        %tr
+          %td=example.document_name
+          %td=example.document_type
+          %td=example.test
