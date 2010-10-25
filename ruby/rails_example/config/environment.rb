@@ -40,4 +40,4 @@ Rails::Initializer.run do |config|
   # config.i18n.default_locale = :de
 end
 
-DocRaptor.api_key "qtwnZJ_R-kkxWuKf9Z4L"
+DocRaptor.api_key "YOUR_API_KEY_HERE"
