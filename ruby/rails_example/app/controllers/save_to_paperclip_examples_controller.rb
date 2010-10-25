@@ -6,8 +6,8 @@ class SaveToPaperclipExamplesController < ApplicationController
     # Don't forget to reigster the xls/pdf mime types in config/initializers/mime_types.rb
     respond_to do |format|
       format.html
-      format.xls { send_data Doc.create(:name => "example_xls", :document_content => render_to_string, :document_type => "xls") }
-      format.pdf { send_data Doc.create(:name => "example_pdf", :document_content => render_to_string, :document_type => "pdf") }
+      format.xls { doc_raptor_send }
+      format.pdf { doc_raptor_send }
     end
   end
   
@@ -33,4 +33,22 @@ class SaveToPaperclipExamplesController < ApplicationController
     redirect_to save_to_paperclip_examples_url
   end
   
+  def doc_raptor_send(options = { })
+    default_options = { 
+      :name             => controller_name,
+      :document_type    => request.format.to_sym,
+      :test             => ! Rails.env.production?,
+    }
+    options = default_options.merge(options)
+    options[:document_content] ||= render_to_string
+    ext = options[:document_type].to_sym
+    
+    response = DocRaptor.create(options)
+    if response.code == 200
+      send_data response, :filename => "#{options[:name]}.#{ext}", :type => ext
+    else
+      render :inline => response.body, :status => response.code
+    end
+  end
+
 end

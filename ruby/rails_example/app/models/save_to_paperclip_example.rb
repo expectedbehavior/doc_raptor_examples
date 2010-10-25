@@ -10,10 +10,16 @@ class SaveToPaperclipExample < ActiveRecord::Base
   before_save :create_document
   
   def create_document
-    Doc.create(:document_content => self.document_content, 
-               :document_type    => self.document_type,
-               :name             => self.document_name,
-               :test             => self.test) do |file, response|
+    DocRaptor.create(:document_content => self.document_content, 
+                     :document_type    => self.document_type,
+                     :name             => self.document_name,
+                     :test             => self.test) do |file, response|
+      
+      file.extend(ActionController::UploadedFile)
+      file.content_type  = response.headers["content-type"]
+      name = self.document_name.strip.gsub(/\s/, "_").gsub(/\W/, "").underscore.downcase
+      file.original_path = "#{name}.#{self.document_type}"
+      
       if response.code == 200
         self.document = file
       else
