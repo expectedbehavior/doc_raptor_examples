@@ -18,6 +18,9 @@ This is a repository of examples in various languages on how to use and integrat
 2. doc_raptor_sample.xls - produced by the curl, plain ruby, and php examples
 3. excel_styling/example1.xls - produced by sending the contents of excel_styling/example1.html to DocRaptor
 
+== Other Libraries
+* PHP consumer for the DocRaptor.com API - http://github.com/krewenki/php-docraptor
+
 ==
 
 * Doc Raptor - http://docraptor.com
