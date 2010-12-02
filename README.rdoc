@@ -1,6 +1,6 @@
 = Doc Raptor Examples Repository
 
-This is a repository of examples in various languages on how to use and integrate with Doc Raptor. Doc Raptor is a web service for easily and quickly generating Excel or PDF files without tendious syntax or extra server requirements.
+This is a repository of examples in various languages on how to use and integrate with Doc Raptor. Doc Raptor is a web service for easily and quickly {generating Excel or PDF files}[http://docraptor.com] without tendious syntax or extra server requirements.
 
 == What does this examples repo contain?
 
