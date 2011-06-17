@@ -73,6 +73,7 @@ namespace DocRaptorConsoleExample {
         }
 
         static void Main(string[] args) {
+
             DocRaptor doc_raptor = new DocRaptor() {
                 DocumentContent = @"<html><body>This is a DocRaptor example!</body></html>",
                 Name = "csharp_sample.pdf",
@@ -80,6 +81,15 @@ namespace DocRaptorConsoleExample {
             };
 
             doc_raptor.CreatePDF();
+
+            /*** Excel Example ***/
+            /*DocRaptor doc_raptor = new DocRaptor() {
+                DocumentContent = @"<table name="Test Sheet"><tr><td>I am a cell!</td></tr></table>",
+                Name = "csharp_sample.xls",
+                Test = true
+            };
+
+            doc_raptor.CreateXLS(); */
         }
     }
 }
