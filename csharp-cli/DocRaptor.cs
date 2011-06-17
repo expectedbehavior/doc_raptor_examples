@@ -73,7 +73,7 @@ namespace DocRaptorConsoleExample {
         }
 
         static void Main(string[] args) {
-
+            /*** PDF Example ***/
             DocRaptor doc_raptor = new DocRaptor() {
                 DocumentContent = @"<html><body>This is a DocRaptor example!</body></html>",
                 Name = "csharp_sample.pdf",
