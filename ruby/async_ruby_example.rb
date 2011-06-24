@@ -35,5 +35,5 @@ if status['status'] == 'completed'
   File.open("doc_raptor_sample.pdf", "w+b") do |f|
     f.write file.response.body
   end
-  puts "#{pretty_time} - File downloaded to docraptor_sample.pdf"
+  puts "#{pretty_time} - File downloaded to doc_raptor_sample.pdf"
 end
