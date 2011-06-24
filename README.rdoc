@@ -6,12 +6,14 @@ This is a repository of examples in various languages on how to use and integrat
 
 === Code
 1. Curl example, for the real nuts & bolts look
-2. A plain Ruby example, using HTTParty
+2. A plain Ruby example, using the DocRaptor gem
 3. A more complicated Ruby on Rails example, showing how to use the service with controllers/views as well as Paperclip
 4. A simple PHP example (using the pecl_http php extension)
 5. Javascript examples for Prototype.js and jQuery; whichever strikes your fancy
 6. An interactive .NET C# / WPF example
 7. An HTML example with complicated excel styling and layout
+8. A CLI .NET C# example
+9. A Ruby example showcasing the async options
 
 === Example Outputs
 1. doc_raptor_sample.pdf - produced by the curl, plain ruby, and php examples
@@ -20,6 +22,7 @@ This is a repository of examples in various languages on how to use and integrat
 
 == Other Libraries
 * PHP consumer for the DocRaptor.com API - http://github.com/krewenki/php-docraptor
+* DocRaptor Gem - http://github.com/expectedbehavior/doc_raptor_gem
 
 ==
 
