@@ -12,7 +12,7 @@ def pretty_time; Time.now.strftime("%I:%M:%S %p"); end
 def print_status(status = {}); puts "#{pretty_time} - Status: #{status['status']}";end
 
 status_id = DocRaptor.create(:document_content => pdf_html,
-                             :name             => "docraptor_sample.pdf",
+                             :name             => "doc_raptor_sample.pdf",
                              :document_type    => "pdf",
                              :test             => true,
                              :async            => true)
@@ -32,7 +32,7 @@ end
 
 if status['status'] == 'completed'
   file = DocRaptor.download(status['download_key'])
-  File.open("docraptor_sample.pdf", "w+b") do |f|
+  File.open("doc_raptor_sample.pdf", "w+b") do |f|
     f.write file.response.body
   end
   puts "#{pretty_time} - File downloaded to docraptor_sample.pdf"

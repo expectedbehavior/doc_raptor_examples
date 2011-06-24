@@ -14,7 +14,7 @@ end
 xls_xml = "<table name='My First Sheet'><tr><td>Cell 1</td><td>Cell 2</td></tr></table>"
 File.open("docraptor_sample.xls", "wb") do |f|
   f.write Doc.create(:document_content => xls_xml,
-                     :name             => "docraptor_sample.xls",
+                     :name             => "doc_raptor_sample.xls",
                      :document_type    => "xls",
                      :test             => true)
 end
@@ -22,7 +22,7 @@ end
 pdf_html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html lang="en"><body><a href="http://google.com">google</a></body></html>'
 File.open("docraptor_sample.pdf", "wb") do |f|
   f.write Doc.create(:document_content => pdf_html,
-                     :name             => "docraptor_sample.pdf",
+                     :name             => "doc_raptor_sample.pdf",
                      :document_type    => "pdf",
                      :test             => true)
 end
