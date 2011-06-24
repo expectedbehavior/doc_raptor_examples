@@ -1,0 +1,9 @@
+*~
+\#*
+.\#*
+.DS_Store
+*_flymake.*
+*.LCK
+ruby/*.html
+ruby/*.pdf
+ruby/*.xls
