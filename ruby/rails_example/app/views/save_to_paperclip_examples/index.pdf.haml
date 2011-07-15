@@ -2,14 +2,20 @@
 %html
   %head
     %title PDF Example
+    %link{:href => "http://fonts.googleapis.com/css?family=Cantarell|Gravitas+One&v2", :rel => "stylesheet", :type => "text/css"}
+    %style{:type => "text/css"}
+      = "h1 { font-family: 'Gravitas One', cursive; font-weight: bold; }"
+      = "th { font-family: 'Cantarell', serif; font-size: 16px; }"
+
   %body
     %h1 Listing Examples
 
     %table{ :width => "100%" }
-      %tr{ :style => "font-weight:bold;" }
-        %td Document Name
-        %td Document Type
-        %td Test Mode
+      %thead
+        %tr
+          %th Document Name
+          %th Document Type
+          %th Test Mode
       - @save_to_paperclip_examples.each do |example|
         %tr
           %td=example.document_name
