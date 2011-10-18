@@ -7,3 +7,10 @@
 ruby/*.html
 ruby/*.pdf
 ruby/*.xls
+ruby/.bundle
+ruby/.sass-cache
+ruby/db/*.sqlite3
+ruby/log/*.log
+ruby/tmp/
+ruby/vendor/bundle/ruby/1.[89]*/*
+ruby/!vendor/bundle/ruby/1.[89]*/cache
