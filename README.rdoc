@@ -21,10 +21,12 @@ This is a repository of examples in various languages on how to use and integrat
 3. excel_styling/example1.xls - produced by sending the contents of excel_styling/example1.html to DocRaptor
 
 == Other Libraries
-* PHP consumer for the DocRaptor.com API - http://github.com/krewenki/php-docraptor
 * DocRaptor Gem - http://github.com/expectedbehavior/doc_raptor_gem
+* jQuery Plugin - https://github.com/baldwindavid/docraptor-jquery
+* PHP consumer for the DocRaptor.com API - http://github.com/krewenki/php-docraptor
 
 ==
 
 * Doc Raptor - http://docraptor.com
+* Doc Raptor Blog - http://docraptor.com/blog
 * Expected Behavior - http://www.expectedbehavior.com
