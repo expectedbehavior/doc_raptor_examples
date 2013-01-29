@@ -5,7 +5,8 @@ public class JavaExample {
     public static void main(String[] args) throws Exception{
         String document = "<html><body>This is a DocRaptor Example</body></html>";
         String apikey = "YOUR_API_KEY_HERE";
-        String data = "doc[document_content]=" + document;
+        String encoded_document = URLEncoder.encode(document, "UTF8");
+        String data = "doc[document_content]=" +encoded_document;
         data += "&doc[name]=java_sample.pdf";
         data += "&doc[document_type]=pdf";
         data += "&doc[test]=true";
