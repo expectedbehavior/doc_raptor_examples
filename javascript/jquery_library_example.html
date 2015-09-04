@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DocRaptor Invoice For Super Best Client</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+    <script src="https://use.typekit.com/gxo7nof.js" type="text/javascript"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script src="https://code.jquery.com/jquery-1.11.3.js" type="text/javascript"></script>
+    <script src="https://raw.githubusercontent.com/expectedbehavior/docraptor-jquery/master/jquery.docraptor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(function() {
+        $(".downloadPDF").docraptor({
+            document_type: 'pdf',
+            test: true
+          },
+          'YOUR_API_KEY_HERE'
+        );
+      });
+    </script>
+    <style type="text/css">
+      /* setup the page */
+      @page {
+        size: US-Letter;
+        margin: 0 0 35mm 0;
+        background: #ffffff;
+      }
+
+      /* setup the footer */
+      @page {
+        @bottom {
+          content: flow(footer);
+        }
+      }
+
+      footer {
+        flow: static(footer);
+      }
+
+      body {
+        border-top: 10px solid #3877B1;
+        font-family: "myriad-pro-1", "myriad-pro-2", sans-serif;
+      }
+
+      #container {
+        margin: 0 auto;
+      }
+
+      header, #main {
+        margin: 15mm;
+      }
+
+      header {
+        margin-top: 5mm;
+        border-bottom: 1px solid #7E7E7E;
+        padding-bottom: 5mm;
+      }
+
+      .seller, .status{
+        float: left;
+      }
+
+      .buyer {
+        float: right;
+      }
+
+      .seller {
+        width: 50%;
+      }
+
+      .buyer  {
+        max-width: 30%;
+      }
+
+      .brand {
+        font-weight: bold;
+        font-size: 30px;
+        color: #333;
+        padding: 10px 0 2px;
+        overflow: auto;
+      }
+
+      .brand span, .brand img {
+        float: left;
+      }
+
+      .brand span {
+        display: block;
+        margin: 8px 0 0 5px;
+      }
+
+      .seller address {
+        clear: both;
+        display: block;
+        padding-left: 65px;
+        ont-size: 10pt;
+        line-height: 12pt;
+        color: #262626;
+      }
+
+      .seller address span {
+        display: block;
+      }
+
+      .status.paid {
+        margin: 25pt 0 0 15pt;
+        letter-spacing: -1pt;
+        font-weight: bold;
+        color: #78E400;
+        font-size: 30pt;
+        border: 5px solid #78E400;
+        padding: 1pt 5pt;
+        transform:        rotate(-15deg);
+        -ms-transform:    rotate(-15deg); /* IE 9 */
+        -webkit-transform:rotate(-15deg); /* Safari and Chrome */
+      }
+
+      .buyer {
+        font-size: 9pt;
+        line-height: 12pt;
+        margin-top: 30pt;
+        color: #262626;
+      }
+
+      .buyer h2 {
+        font-weight: bold;
+        font-size: 11pt;
+      }
+
+      .buyer span { display: block; }
+
+      /* main */
+      table {
+        width: 100%;
+      }
+
+      th {
+        font-size: 8pt;
+        color: #919191;
+        line-height: 14pt;
+        text-align: left;
+        padding-left: 10pt;
+        border-bottom: 1px solid #D6D6D6;
+      }
+
+      th:last-child, td:last-child {
+        width: 20%;
+      }
+
+      th:last-child {
+        padding-left: 10mm;
+      }
+
+      td {
+        padding: 10pt;
+        border-bottom: 1px solid #D6D6D6;
+      }
+
+      td h4 {
+        font-weight: bold;
+        font-size: 12pt;
+      }
+
+      td .description {
+        font-size: 9pt;
+        line-height: 14pt;
+      }
+
+      td.price {
+        vertical-align: middle;
+        font-size: 12pt;
+        font-weight: bold;
+        text-align: right;
+      }
+
+      tr:nth-child(odd) td{
+        background: #F1F1F1;
+      }
+
+      #notes {
+        font-size: 9pt;
+        color: #7E7E7E;
+        line-height: 14pt;
+        font-style: italic;
+        margin-top: 4mm;
+        padding: 3mm;
+        float: left;
+      }
+
+      #totals{
+        padding: 3mm;
+        float: right;
+        text-align: right;
+        font-size: 12pt;
+        color: #7E7E7E;
+        line-height: 16pt;
+      }
+
+      /* footer */
+      footer {
+        text-align: center;
+      }
+
+      footer p {
+        background: #F3F3F3;
+        color: #888;
+        text-align: center;
+        font-size: 8pt;
+        line-height: 12pt;
+        padding: 7mm 0;
+        margin-top: 2mm;
+      }
+
+      .clearfix{ clear: both; }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+
+      <header>
+        <div class="seller">
+          <h1 class="brand">
+            <img src="http://docraptor.com/assets/docraptor-logo.svg" width="60" height="43" /> <span>DocRaptor</span>
+          </h1>
+          <address>
+            2885 Sanford Ave SW #13508, Grandville, MI 49418-1342
+            <span class="email">support@docraptor.com</span>
+            <a href="https://docraptor.com/samples/invoice.html" title="Test Title" class="downloadPDF">Click me for a PDF</a>
+          </address>
+        </div>
+
+        <div class="status paid">PAID</div>
+
+        <div class="buyer">
+          <h2>Billed To</h2>
+          Super Best Client
+          <span class="email">superbestclient@example.com</span>
+          <span class="date">January 20, 2014</span>
+        </div>
+        <div class="clearfix"></div>
+      </header>
+
+      <div id="main">
+        <table>
+          <thead>
+            <tr>
+              <th class="title">Summary</th>
+              <th class="price">Price</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <h4>Max Plan</h4>
+                <p class="description">March 21, 2014 - April 21, 2014</p>
+              </td>
+              <td class="price"><span class="price">$149.00 USD</span></td>
+            </tr>
+            <tr>
+              <td>
+                <h4>Document Overage</h4>
+                <p class="description">0 docs @ $.39</p>
+              </td>
+              <td class="price"><span class="price">$0.00 USD</span></td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="notes">
+          This charge will appear on your credit card statement as "DOCRAPTOR.COM".
+        </p>
+        <div id="totals">
+          <p>Total: <span class="price">$149.00 USD</span></p>
+          <p>Due: <span class="price">$0.00 USD</span></p>
+        </div>
+      </div>
+
+      <footer>
+        <img alt="Expected Behavior Logo" height="34" src="https://docraptor.com/assets/expected-behavior-logo.svg" width="150" />
+        <p>DocRaptor is made and supported by Expected Behavior, LLC<br>1-866-991-3746 | 2885 Sanford Ave SW #13508, Grandville, MI 49418-1342 | support@docraptor.com</p>
+      </footer>
+  </body>
+</html>
