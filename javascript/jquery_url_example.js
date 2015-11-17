@@ -3,7 +3,7 @@
 // to easily make a form and POST it
 var download = function(url, data, method){
   //url and data options required
-  if(url && data){ 
+  if(url && data){
     //data can be string of parameters or array/object
     data = jQuery.param(data);
 
@@ -16,19 +16,19 @@ var download = function(url, data, method){
            + '</form>').appendTo('body').submit().remove();
   }
 };
-       
+
 // setup the string represeting the html we want to submit
 var content = '<table name="foo"><tr><td>word up</td></tr></table><textarea>Foo&nbsp;&nbsp;&trade;&nbsp;&nbsp;Bar</textarea>';
-       
+
 var data = {
   doc: {
     test: true,
     document_type: 'pdf',
-    name: 'adoc', 
+    name: 'adoc',
     document_content: content,
     strict: 'none'
   },
-  user_credentials: 'YOUR_API_KEY'
+  user_credentials: 'YOUR_API_KEY_HERE'
 };
 
 // this drops a form on the page and submits, which will result in a download dialog popping up
